@@ -23,13 +23,18 @@ import (
 
 // Task ...
 type Task struct {
-	ID uuid.UUID
+	ID          uuid.UUID
+	Name        string
+	Description string
 }
 
 // NewTask ...
-func NewTask() *Task {
+func NewTask(name string, description string) *Task {
 	t := &Task{
-		ID: uuid.New(),
+		ID:          uuid.New(),
+		Name:        name,
+		Description: description,
 	}
+
 	return t
 }
