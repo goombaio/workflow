@@ -16,3 +16,20 @@
 // under the License.
 
 package workflow
+
+import (
+	"github.com/google/uuid"
+)
+
+// Task ...
+type Task struct {
+	ID uuid.UUID
+}
+
+// NewTask ...
+func NewTask() *Task {
+	t := &Task{
+		ID: uuid.New(),
+	}
+	return t
+}
