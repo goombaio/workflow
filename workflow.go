@@ -18,6 +18,8 @@
 package workflow
 
 import (
+	"sync"
+
 	"github.com/google/uuid"
 )
 
@@ -26,6 +28,9 @@ type Workflow struct {
 	ID          uuid.UUID
 	Name        string
 	Description string
+
+	mu    sync.Mutex
+	tasks map[uuid.UUID]*Task
 }
 
 // NewWorkflow ...
@@ -34,7 +39,18 @@ func NewWorkflow(name string, description string) *Workflow {
 		ID:          uuid.New(),
 		Name:        name,
 		Description: description,
+		tasks:       make(map[uuid.UUID]*Task),
 	}
 
 	return w
+}
+
+// AddTask ...
+func (w *Workflow) AddTask(task *Task) error {
+	w.mu.Lock()
+	defer w.mu.Unlock()
+
+	w.tasks[task.ID] = task
+
+	return nil
 }
