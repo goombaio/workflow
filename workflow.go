@@ -50,3 +50,8 @@ func (w *Workflow) AddTask(task *Task) error {
 	err := w.dag.AddVertex(taskVertex)
 	return err
 }
+
+// Run ...
+func (w *Workflow) Run() error {
+	return nil
+}

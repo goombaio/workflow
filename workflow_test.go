@@ -51,6 +51,31 @@ func TestWorkflowAddTask(t *testing.T) {
 
 	err := workflow1.AddTask(task1)
 	if err != nil {
-		t.Fatalf("Can't add task %s to workflow %s", task1.ID, workflow1.ID)
+		t.Fatalf("Can't add task %s to workflow %s:%s", task1.ID, workflow1.ID, workflow1.Name)
+	}
+}
+
+func TestWorkflowNoTasksRun(t *testing.T) {
+	workflow1 := workflow.NewWorkflow("workflow1", "workflow1 description")
+
+	err := workflow1.Run()
+	if err != nil {
+		t.Fatalf("Workflow %s:%s failed to run: %s", workflow1.ID, workflow1.Name, err)
+	}
+}
+
+func TestWorkflowWithTasksRun(t *testing.T) {
+	workflow1 := workflow.NewWorkflow("workflow1", "workflow1 description")
+
+	task1 := workflow.NewTask("task1", "task1 description")
+
+	err := workflow1.AddTask(task1)
+	if err != nil {
+		t.Fatalf("Can't add task %s to workflow %s:%s", task1.ID, workflow1.ID, workflow1.Name)
+	}
+
+	err = workflow1.Run()
+	if err != nil {
+		t.Fatalf("Workflow %s:%s failed to run: %s", workflow1.ID, workflow1.Name, err)
 	}
 }
