@@ -29,17 +29,17 @@ func TestTaskInstance(t *testing.T) {
 	expected_name := "task_1"
 	expected_description := "task_1 description"
 
-	tsk := workflow.NewTask(expected_name, expected_description)
+	task1 := workflow.NewTask(expected_name, expected_description)
 
-	if tsk.ID == uuid.Nil {
+	if task1.ID == uuid.Nil {
 		t.Fatalf("Workflow ID expected to be not nil.\n")
 	}
 
-	if tsk.Name != expected_name {
-		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, tsk.Name)
+	if task1.Name != expected_name {
+		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, task1.Name)
 	}
 
-	if tsk.Description != expected_description {
-		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, tsk.Description)
+	if task1.Description != expected_description {
+		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, task1.Description)
 	}
 }

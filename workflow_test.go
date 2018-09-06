@@ -29,17 +29,28 @@ func TestWorkflowInstance(t *testing.T) {
 	expected_name := "workflow_1"
 	expected_description := "workflow_1 description"
 
-	w := workflow.NewWorkflow(expected_name, expected_description)
+	workflow1 := workflow.NewWorkflow(expected_name, expected_description)
 
-	if w.ID == uuid.Nil {
+	if workflow1.ID == uuid.Nil {
 		t.Fatalf("Workflow ID expected to be not nil.\n")
 	}
 
-	if w.Name != expected_name {
-		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, w.Name)
+	if workflow1.Name != expected_name {
+		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, workflow1.Name)
 	}
 
-	if w.Description != expected_description {
-		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, w.Description)
+	if workflow1.Description != expected_description {
+		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, workflow1.Description)
+	}
+}
+
+func TestWorkflowAddTask(t *testing.T) {
+	workflow1 := workflow.NewWorkflow("workflow1", "workflow1 description")
+
+	task1 := workflow.NewTask("task1", "task1 description")
+
+	err := workflow1.AddTask(task1)
+	if err != nil {
+		t.Fatalf("Can't add task %s to workflow %s", task1.ID, workflow1.ID)
 	}
 }

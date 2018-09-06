@@ -25,10 +25,10 @@ import (
 
 // Workflow ...
 type Workflow struct {
-	dag.DAG
 	ID          uuid.UUID
 	Name        string
 	Description string
+	dag         *dag.DAG
 }
 
 // NewWorkflow ...
@@ -37,7 +37,16 @@ func NewWorkflow(name string, description string) *Workflow {
 		ID:          uuid.New(),
 		Name:        name,
 		Description: description,
+		dag:         dag.NewDAG(),
 	}
 
 	return w
+}
+
+// AddTask ...
+func (w *Workflow) AddTask(task *Task) error {
+	taskVertex := dag.NewVertex(task)
+
+	err := w.dag.AddVertex(taskVertex)
+	return err
 }
