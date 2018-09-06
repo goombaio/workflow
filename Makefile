@@ -57,6 +57,7 @@ lint:			## Lint source code
 
 deps:			## Install build dependencies
 	go get -u github.com/google/uuid
+	go get -u github.com/goombaio/dag
 
 
 dev-deps: deps
