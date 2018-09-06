@@ -50,7 +50,7 @@ limitations under the License.
 [Coverage-URL]: https://codecov.io/gh/goombaio/workflow
 [GoReportCard-Image]: https://goreportcard.com/badge/github.com/goombaio/workflow
 [GoReportCard-URL]: https://goreportcard.com/report/github.com/goombaio/workflow
-[CII-Image]: https://bestpractices.coreinfrastructure.org/projects/2177/badge
-[CII-URL]: https://bestpractices.coreinfrastructure.org/projects/2177
+[CII-Image]: https://bestpractices.coreinfrastructure.org/projects/2178/badge
+[CII-URL]: https://bestpractices.coreinfrastructure.org/projects/2178
 [GoDoc-Image]: https://godoc.org/github.com/goombaio/workflow?status.svg
 [GoDoc-URL]: http://godoc.org/github.com/goombaio/workflow
