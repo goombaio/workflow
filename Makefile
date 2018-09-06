@@ -1,5 +1,3 @@
-include Makefile.help.mk
-
 BINARY=workflow
 MAIN_PACKAGE=cmd/${BINARY}/main.go
 PACKAGES = $(shell go list ./...)
@@ -77,3 +75,5 @@ clean:			## Delete generated development environment
 
 godoc-serve:		## Serve documentation (godoc format) for this package at port HTTP 9090
 	godoc -http=":9090"
+
+include Makefile.help.mk

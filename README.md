@@ -24,6 +24,13 @@ You can also update an already installed version:
 go get -u github.com/goombaio/workflow
 ```
 
+## Example of use
+
+```go
+// Create a Workflow
+workflow1 := workflow.NewWorkflow()
+```
+
 ## License
 
 Copyright (c) 2018 Goomba project Authors.
