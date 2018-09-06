@@ -42,8 +42,8 @@ limitations under the License.
 
 [License-Image]: https://img.shields.io/badge/License-Apache-blue.svg
 [License-URL]: http://opensource.org/licenses/Apache
-[FOSSA-Image]: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgoombaio%workflow.svg?type=shieldss
-[FOSSA-URL]: https://app.fossa.io/projects/git%2Bgithub.com%2Fgoombaio%workflow?ref=badge_shield
+[FOSSA-Image]: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgoombaio%2Fworkflow.svg?type=shield
+[FOSSA-URL]: https://app.fossa.io/projects/git%2Bgithub.com%2Fgoombaio%2Fworkflow?ref=badge_shield
 [CircleCI-Image]: https://circleci.com/gh/goombaio/workflow.svg?style=svg
 [CircleCI-URL]: https://circleci.com/gh/goombaio/workflow
 [Coverage-Image]: https://codecov.io/gh/goombaio/workflow/branch/master/graph/badge.svg
