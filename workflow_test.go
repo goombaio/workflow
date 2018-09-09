@@ -25,7 +25,7 @@ import (
 	"github.com/goombaio/workflow"
 )
 
-func TestWorkflowInstance(t *testing.T) {
+func TestWorkflow(t *testing.T) {
 	expected_name := "workflow_1"
 	expected_description := "workflow_1 description"
 
