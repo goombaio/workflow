@@ -42,11 +42,3 @@ func NewWorkflow(name string, description string) *Workflow {
 
 	return w
 }
-
-// AddTask ...
-func (w *Workflow) AddTask(task *Task) error {
-	taskVertex := dag.NewVertex(task)
-
-	err := w.dag.AddVertex(taskVertex)
-	return err
-}

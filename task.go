@@ -17,24 +17,6 @@
 
 package workflow
 
-import (
-	"github.com/google/uuid"
-)
-
-// Task ...
-type Task struct {
-	ID          uuid.UUID
-	Name        string
-	Description string
-}
-
-// NewTask ...
-func NewTask(name string, description string) *Task {
-	t := &Task{
-		ID:          uuid.New(),
-		Name:        name,
-		Description: description,
-	}
-
-	return t
+// TaskInterface ...
+type TaskInterface interface {
 }

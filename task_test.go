@@ -16,30 +16,3 @@
 // under the License.
 
 package workflow_test
-
-import (
-	"testing"
-
-	"github.com/google/uuid"
-
-	"github.com/goombaio/workflow"
-)
-
-func TestTaskInstance(t *testing.T) {
-	expected_name := "task_1"
-	expected_description := "task_1 description"
-
-	task1 := workflow.NewTask(expected_name, expected_description)
-
-	if task1.ID == uuid.Nil {
-		t.Fatalf("Workflow ID expected to be not nil.\n")
-	}
-
-	if task1.Name != expected_name {
-		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, task1.Name)
-	}
-
-	if task1.Description != expected_description {
-		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, task1.Description)
-	}
-}

@@ -43,14 +43,3 @@ func TestWorkflowInstance(t *testing.T) {
 		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, workflow1.Description)
 	}
 }
-
-func TestWorkflowAddTask(t *testing.T) {
-	workflow1 := workflow.NewWorkflow("workflow1", "workflow1 description")
-
-	task1 := workflow.NewTask("task1", "task1 description")
-
-	err := workflow1.AddTask(task1)
-	if err != nil {
-		t.Fatalf("Can't add task %s to workflow %s", task1.ID, workflow1.ID)
-	}
-}
