@@ -28,7 +28,7 @@ type Workflow struct {
 	ID          uuid.UUID
 	Name        string
 	Description string
-	dag         *dag.DAG
+	graph       *dag.DAG
 }
 
 // NewWorkflow ...
@@ -37,8 +37,11 @@ func NewWorkflow(name string, description string) *Workflow {
 		ID:          uuid.New(),
 		Name:        name,
 		Description: description,
-		dag:         dag.NewDAG(),
+		graph:       dag.NewDAG(),
 	}
 
 	return w
 }
+
+// Run ...
+
