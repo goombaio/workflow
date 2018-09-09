@@ -43,3 +43,12 @@ func TestWorkflow(t *testing.T) {
 		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, workflow1.Description)
 	}
 }
+
+func TestWorkflow_Run(t *testing.T) {
+	workflow1 := workflow.NewWorkflow("workflow1", "workflow1 description")
+
+	err := workflow1.Run()
+	if err != nil {
+		t.Fatalf("Workflow execution failed: %s", err)
+	}
+}

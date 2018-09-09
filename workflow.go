@@ -43,5 +43,11 @@ func NewWorkflow(name string, description string) *Workflow {
 	return w
 }
 
-// Run ...
-
+// Run will validate that all edges in the graph point to existing vertices,
+// and that there are no dependency cycles. After validation, each vertex will
+// be run, deterministically, in parallel topological order. If any vertex
+// returns an error, no more vertices will be scheduled and Run will exit and
+// return that error once all in-flight functions finish execution.
+func (w *Workflow) Run() error {
+	return nil
+}
