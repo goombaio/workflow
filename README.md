@@ -5,7 +5,6 @@ Goomba workflows
 ## Badges
 
 [![License][License-Image]][License-URL]
-[![FOSSA Status][FOSSA-Image]][FOSSA-URL]
 [![CircleCI Status][CircleCI-Image]][CircleCI-URL]
 [![Coverage Report][Coverage-Image]][Coverage-URL]
 [![Go Report Card][GoReportCard-Image]][GoReportCard-URL]
@@ -49,8 +48,6 @@ limitations under the License.
 
 [License-Image]: https://img.shields.io/badge/License-Apache-blue.svg
 [License-URL]: http://opensource.org/licenses/Apache
-[FOSSA-Image]: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgoombaio%2Fworkflow.svg?type=shield
-[FOSSA-URL]: https://app.fossa.io/projects/git%2Bgithub.com%2Fgoombaio%2Fworkflow?ref=badge_shield
 [CircleCI-Image]: https://circleci.com/gh/goombaio/workflow.svg?style=svg
 [CircleCI-URL]: https://circleci.com/gh/goombaio/workflow
 [Coverage-Image]: https://codecov.io/gh/goombaio/workflow/branch/master/graph/badge.svg
