@@ -56,6 +56,7 @@ benchmark:		## Execute package benchmarks
 
 deps:			## Install build dependencies
 	go get -u
+	go mod tidy -v
 	go mod download
 	go mod verify
 
@@ -70,6 +71,12 @@ clean:			## Delete generated development environment
 	rm -rf ${BINARY}-*-*.exe
 	rm -rf ${BINARY}-*-*.zip
 	rm -rf coverage-all.out
+
+# Lint
+
+.PHONY: lint
+lint:			## Lint source code
+	./lint.bash
 
 # Docs
 
