@@ -35,12 +35,12 @@ type Workflow struct {
 	// Description of this worflow and its purpose.
 	Description string
 
-	// A Directed acyclic graph describes the workflow processes and how are
-	// they related each other.
+	// A Directed acyclic graph or DAG  describes the workflow processes and
+	// how are they related each other.
 	graph *dag.DAG
 }
 
-// NewWorkflow creates a new workflow engine given its name and description.
+// NewWorkflow creates a new workflow engine given a name and description.
 //
 // It generates an unique internal ID which will be used to identify this
 // concrete workflow engine among others in order to support traceability,
