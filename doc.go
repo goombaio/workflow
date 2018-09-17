@@ -15,13 +15,19 @@
 // License for the specific language governing permissions and limitations
 // under the License.
 
-// Package workflow implements a workflow engine that manages business
-// processes.
-//
-// A workflow consists of an orchestrated and repeatable pattern of business
-// activity enabled by the systematic organization of resources into processes
-// that transform data and process information.
-//
-// Internally, single workflow is described as a graph, a directed acyclic
-// graph or DAG.
+/*
+Package workflow implements a workflow engine that manages business processes.
+
+A workflow consists of an orchestrated and repeatable pattern of business
+activity enabled by the systematic organization of resources into processes
+that transform data and process information.
+
+Internally, single workflow is described as a graph, a directed acyclic graph
+or DAG.
+
+Example
+
+	workflow1 := workflow.NewWorkflow("My Workflow", "This is an example of workflow")
+
+*/
 package workflow
