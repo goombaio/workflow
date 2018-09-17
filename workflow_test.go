@@ -26,20 +26,20 @@ import (
 )
 
 func TestWorkflow(t *testing.T) {
-	expected_name := "workflow_1"
-	expected_description := "workflow_1 description"
+	expected_name := "workflow1"
+	expected_description := "workflow1 description"
 
 	workflow1 := workflow.NewWorkflow(expected_name, expected_description)
 
 	if workflow1.ID == uuid.Nil {
-		t.Fatalf("Workflow ID expected to be not nil.\n")
+		t.Fatalf("ID expected to be not nil.\n")
 	}
 
 	if workflow1.Name != expected_name {
-		t.Fatalf("Workflow name expected to be %q but got %s.\n", expected_name, workflow1.Name)
+		t.Fatalf("Name expected to be %q but got %s.\n", expected_name, workflow1.Name)
 	}
 
 	if workflow1.Description != expected_description {
-		t.Fatalf("Workflow name expected to be %q but got %q.\n", expected_description, workflow1.Description)
+		t.Fatalf("Description expected to be %q but got %q.\n", expected_description, workflow1.Description)
 	}
 }

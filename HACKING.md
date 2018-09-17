@@ -1,10 +1,10 @@
 # Hacking
 
-## Install deps, dev-deps and run test.
+## Install deps, dev-deps and run test
 
-```
-git clone git@github.com:goombaio/workflow.git
-cd dag
+```sh
+$ git clone git@github.com:goombaio/workflow.git
+$ cd workflow
 export GO111MODULE=on  # ref: https://dave.cheney.net/2018/07/16/using-go-modules-with-travis-ci
 make deps
 make dev-deps

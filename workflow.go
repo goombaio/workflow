@@ -23,15 +23,31 @@ import (
 	"github.com/goombaio/dag"
 )
 
-// Workflow ...
+// Workflow type represents a workflow engine.
 type Workflow struct {
-	ID          uuid.UUID
-	Name        string
+	// Unique ID for this workflow engine.
+	// Used for traceability, metrics, monitoring, etc ...
+	ID uuid.UUID
+
+	// Name of this workflow engine.
+	Name string
+
+	// Description of this worflow and its purpose.
 	Description string
-	graph       *dag.DAG
+
+	// A Directed acyclic graph describes the workflow processes and how are
+	// they related each other.
+	graph *dag.DAG
 }
 
-// NewWorkflow ...
+// NewWorkflow creates a new workflow engine given its name and description.
+//
+// It generates an unique internal ID which will be used to identify this
+// concrete workflow engine among others in order to support traceability,
+// metrics, monitoring, etc ...
+//
+// The workflow is defined by a graph, a directed acyclic graph or DAG. This
+// graph will describe the inner processes belonging to it.
 func NewWorkflow(name string, description string) *Workflow {
 	w := &Workflow{
 		ID:          uuid.New(),
@@ -42,6 +58,3 @@ func NewWorkflow(name string, description string) *Workflow {
 
 	return w
 }
-
-// Run ...
-
