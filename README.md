@@ -1,6 +1,6 @@
 # workflow
 
-Goomba workflows
+Goomba workflow engine.
 
 ## Badges
 
@@ -27,7 +27,7 @@ go get -u github.com/goombaio/workflow
 
 ```go
 // Create a Workflow
-workflow1 := workflow.NewWorkflow()
+workflow1 := workflow.NewWorkflow("My Workflow", "This is an example of workflow")
 ```
 
 ## License
