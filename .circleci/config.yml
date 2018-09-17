@@ -28,6 +28,7 @@ jobs:
       - run: make test-race
       - run: make cover-profile
       - run: bash <(curl -s https://codecov.io/bash)
+
   benchmark:
     docker:
       # specify the version
