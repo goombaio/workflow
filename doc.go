@@ -25,7 +25,7 @@ that transform data and process information.
 Internally, single workflow is described as a graph, a directed acyclic graph
 or DAG.
 
-Examples:
+Example
 
 	workflow1 := workflow.NewWorkflow("My Workflow", "This is an example of workflow")
 */
